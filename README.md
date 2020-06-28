@@ -24,3 +24,7 @@ It will be combination of CNN and RNN
 # Team Members
 ## [Abhijeet C](https://github.com/abhijeet1999)
 ## [Bharath T U](https://github.com/5hade5layer)
+
+DOI : https://doi.org/10.1007/978-3-030-00665-5_72
+
+
