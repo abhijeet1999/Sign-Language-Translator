@@ -1,7 +1,5 @@
-'''* Team Id : #1850
-* Author List : Bharth.T.U , Abhijeet C ,Gautham Rajesh , Joyal T John
-* Filename: train_animal.py
-* Theme: Homecoming
+'''
+* Author List : Bharth.T.U , Abhijeet C
 * Functions: 1
 * Global Variables: none since there is no functions
 '''
@@ -89,7 +87,7 @@ if not train_on_gpu:
 	print('CUDA is not available.  Training on CPU ...')
 else:
 	print('CUDA is available!  Training on GPU ...')
-print("2")
+
 #data_dir = for path of the dataset
 data_dir = 'hand_dataset'
 # the classes are defined
@@ -145,9 +143,9 @@ elif model_name == 'ResNet152':
 	model.fc = nn.Linear(n_inputs, len(classes))
 
 elif model_name == 'ResNet50':
-	model = models.resnet50(pretrained=True)
-	for param in model.parameters():
-		param.requires_grad = False
+	model = models.resnet50(pretrained=False)
+	# for param in model.parameters():
+	# 	param.requires_grad = False
 	n_inputs = model.fc.in_features
 	model.fc = nn.Linear(n_inputs, len(classes))
 elif model_name == 'ResNet101':
@@ -159,7 +157,7 @@ elif model_name == 'ResNet101':
 # if GPU is available, move the model to GPU
 if train_on_gpu:
 	model.cuda()
-feature_extract = True
+feature_extract = False
 # specify loss function (categorical cross-entropy)
 criterion = nn.CrossEntropyLoss()
 params_to_update = model.parameters()
