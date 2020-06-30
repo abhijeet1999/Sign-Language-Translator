@@ -19,7 +19,7 @@ https://drive.google.com/drive/folders/1mHmmmSaU5ZV8QKIUSCF0fabVv54HhxWq?usp=sha
 
 
 ## Model 
-It will be combination of CNN and RNN
+# resnet50-transfer-learning
 
 # Team Members
 ## [Abhijeet C](https://github.com/abhijeet1999)
