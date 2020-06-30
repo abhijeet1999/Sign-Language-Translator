@@ -8,6 +8,12 @@ We propose an app which can convert sign language in real time into voice or tex
 Due to unavailability of Indian Sign language dataset (ISL), We have created dataset of 5000 images. Data set contains 100 images each for 50 Indian signs. Improvements, suggestions and accuracy statistics on your algorithms are welcomed. Dataset can be downloaded from
 https://drive.google.com/drive/folders/1mHmmmSaU5ZV8QKIUSCF0fabVv54HhxWq?usp=sharing
 
+There are 3 type of Dataset 
+- NoFilterModeDataSet
+- AdaptiveThresholdModeDataSet
+- SiftModeDataSet
+
+
 ### Classes ( 50 Signs )
 **['Aboard', 'All_Gone', 'Baby', 'Beside', 'Book', 'Bowl', 'Bridge', 
 'Camp','Cartridge', 'Eight', 'Five', 'Fond', 'Four', 
@@ -20,6 +26,16 @@ https://drive.google.com/drive/folders/1mHmmmSaU5ZV8QKIUSCF0fabVv54HhxWq?usp=sha
 
 ## Model 
 # resnet50-transfer-learning
+
+## How to Use System
+- Run preprocessor.py to extract the data classwise 
+- Run sign_train.py for Training the Data
+# OUTPUT
+## For NoFilterModeDataSet
+   ### Training 
+   Train loss: 0.6632174905389547 -- Acurracy: 92.7734375000000000%
+   ### Testing
+   Test Loss: 0.092023  -- Test Accuracy (Overall): 82% (422/510)
 
 # Team Members
 ## [Abhijeet C](https://github.com/abhijeet1999)
