@@ -33,9 +33,9 @@ There are 3 type of Dataset
 # OUTPUT
 ## For NoFilterModeDataSet
    ### Training 
-   Train loss: 0.6632174905389547 -- Acurracy: 92.7734375000000000%
+   Train loss: 0.0952325779944658 -- Acurracy: 97.0238095238095184%
    ### Testing
-   Test Loss: 0.092023  -- Test Accuracy (Overall): 82% (422/510)
+   Test Loss: 0.017252  -- Test Accuracy (Overall): 97% (991/1020)
 
 # Team Members
 ## [Abhijeet C](https://github.com/abhijeet1999)
