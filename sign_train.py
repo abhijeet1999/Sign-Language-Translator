@@ -91,8 +91,6 @@ else:
 #data_dir = for path of the dataset
 data_dir = 'hand_dataset'
 # the classes are defined
-#classes = ['arctic fox', 'bear', 'bee','butterfly','cat','cougar','cow','coyote','crab','crocodile','deer','dog','eagle','elephant','fish','frog','giraffe','goat','hippo','horse','kangaroo','lion','monkey','otter','panda','parrot','penguin','raccoon','rat','seal','shark','sheep','skunk','snake','snow leopard','tiger','yak','zebra']
-#classes = ['baseball', 'basketball court', 'beach', 'circular farm', 'cloud','commercial area','dense residential','desert','forest','golf course','harbor','island','lake','meadow','medium residential area','mountain','rectangular farm','river','sea glacier','shrubs','snowberg','sparse residential area','thermal power station','wetland']
 # define dataloader parameters
 classes=['Aboard', 'All_Gone', 'Baby', 'Beside', 'Book', 'Bowl', 'Bridge', 'Camp', 'Cartridge', 'Eight', 'Five', 'Fond', 'Four', 'Friend', 'Glove', 'Hang', 'High', 'House', 'How_Many', 'IorMe', 'Man', 'Marry', 'Meat', 'Medal', 'Mid_Day', 'Middle', 'Money', 'Moon', 'Mother', 'Nine', 'One', 'Opposite', 'Prisoner', 'Ring', 'Rose', 'See', 'Seven', 'Short', 'Six', 'Superior', 'Ten', 'Thick', 'Thin', 'Three', 'Tobacco', 'Two', 'Up', 'Watch', 'Write', 'You']
 
@@ -113,13 +111,13 @@ out = torchvision.utils.make_grid(inputs)
 # Select a model [ 'VGG16', ResNet18', 'ResNet152' ]
 model_name = 'ResNet50'
 # number of epochs to train the model
-n_epochs = 14
+n_epochs = 6
 # Load the pretrained model from pytorch
 model = None
 
 """
   This if else ladder is for using multiple model at ease , just by mentioning thw model name , it uses that model for transfer learning
-  here we used vgg16,resnet(18,50,101,152)and we came to concluson that resnet 101 is best model for this dataset
+  here we used vgg16,resnet(18,50,101,152)
 """
 if model_name == 'VGG16':
 	model = models.vgg16(pretrained=True)
@@ -132,8 +130,8 @@ if model_name == 'VGG16':
 
 elif model_name == 'ResNet18':
 	model = models.resnet18(pretrained=True)
-	for param in model.parameters():
-		param.requires_grad = False
+	# for param in model.parameters():
+	# 	param.requires_grad = False
 	n_inputs = model.fc.in_features
 	model.fc = nn.Linear(n_inputs, len(classes))
 
@@ -143,7 +141,7 @@ elif model_name == 'ResNet152':
 	model.fc = nn.Linear(n_inputs, len(classes))
 
 elif model_name == 'ResNet50':
-	model = models.resnet50(pretrained=False)
+	model = models.resnet50(pretrained=True)
 	# for param in model.parameters():
 	# 	param.requires_grad = False
 	n_inputs = model.fc.in_features
@@ -161,17 +159,17 @@ feature_extract = False
 # specify loss function (categorical cross-entropy)
 criterion = nn.CrossEntropyLoss()
 params_to_update = model.parameters()
-print("Params to learn:")
-if feature_extract:
-    params_to_update = []
-    for name,param in model.named_parameters():
-        if param.requires_grad == True:
-            params_to_update.append(param)
-            print("\t",name)
-else:
-    for name,param in model.named_parameters():
-        if param.requires_grad == True:
-            print("\t",name)
+# print("Params to learn:")
+# if feature_extract:
+#     params_to_update = []
+#     for name,param in model.named_parameters():
+#         if param.requires_grad == True:
+#             params_to_update.append(param)
+#             print("\t",name)
+# else:
+#     for name,param in model.named_parameters():
+#         if param.requires_grad == True:
+#             print("\t",name)
 
 # specify optimizer (stochastic gradient descent) and learning rate = 0.001
 try:
