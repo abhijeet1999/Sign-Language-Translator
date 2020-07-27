@@ -91,9 +91,8 @@ else:
 #data_dir = for path of the dataset
 data_dir = 'hand_dataset'
 # the classes are defined
-# define dataloader parameters
 classes=['Aboard', 'All_Gone', 'Baby', 'Beside', 'Book', 'Bowl', 'Bridge', 'Camp', 'Cartridge', 'Eight', 'Five', 'Fond', 'Four', 'Friend', 'Glove', 'Hang', 'High', 'House', 'How_Many', 'IorMe', 'Man', 'Marry', 'Meat', 'Medal', 'Mid_Day', 'Middle', 'Money', 'Moon', 'Mother', 'Nine', 'One', 'Opposite', 'Prisoner', 'Ring', 'Rose', 'See', 'Seven', 'Short', 'Six', 'Superior', 'Ten', 'Thick', 'Thin', 'Three', 'Tobacco', 'Two', 'Up', 'Watch', 'Write', 'You']
-
+# define dataloader parameters
 batch_size = 32
 num_workers = 2
 augment=1
