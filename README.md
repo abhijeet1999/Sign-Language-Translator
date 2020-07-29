@@ -27,23 +27,29 @@ There are 3 type of Dataset
 ## Model 
 #### resnet50-transfer-learning
 
-## How to Use System
-### - Instal everything in Requirment.txt
-### - Run **preprocessor.py** to extract the data classwise from Dataset
-### - Run **sign_train.py** for Training the Data
 # OUTPUT
 ## For NoFilterModeDataSet
    ### Training 
    Train loss: 0.0952325779944658 -- Acurracy: 97.0238095238095184%
    ### Testing
    Test Loss: 0.017252  -- Test Accuracy (Overall): 97% (991/1020)
-## How to run:- demo.py
-### demo.py 'imagepath' --mod 'model path'
- Default model path is NoFilter.pth
-### eg:  demo.py img.png --mod model.pth
+
+
+## How to Use System
+### - Instal everything in Requirment.txt
+### - Run **preprocessor.py** to extract the data classwise from Dataset
+### - Run **sign_train.py** for Training the Data
+### - Download demo model from model.txt
+### - Run **demo.py** :-   demo.py 'imagepath' --mod 'model path'
+### - Eg:  demo.py img.png --mod model.pth
+### - Default model path is NoFilter.pth 
+
 # Team Members
 ## [Abhijeet C](https://github.com/abhijeet1999)
 ## [Bharath T U](https://github.com/5hade5layer)
+
+About Us
+This Project is done for Learning purpose.We have code which can take any transfer learning and use it.
 
 DOI : https://doi.org/10.1007/978-3-030-00665-5_72
 
