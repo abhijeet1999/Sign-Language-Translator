@@ -48,7 +48,7 @@ There are 3 type of Dataset
 ## [Abhijeet C](https://github.com/abhijeet1999)
 ## [Bharath T U](https://github.com/5hade5layer)
 
-About Us
+**About Us**
 This Project is done for Learning purpose.We have code which can take any transfer learning and use it.
 
 DOI : https://doi.org/10.1007/978-3-030-00665-5_72
