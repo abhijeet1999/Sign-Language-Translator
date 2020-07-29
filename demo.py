@@ -1,7 +1,9 @@
 '''
+how to run:- demo.py <imagepath> --mod <model path>
+default model path is NoFilter.pth
 Variable Comments
 train_on_gpu  :  to check if device have  gpu or not
-device        :  devioce we use (GPU/CPU)
+device        :  device we use (GPU/CPU)
 classes       :  list of classes  
 data_transform:  image transformation according to model
 img           :  the argument that is passed
