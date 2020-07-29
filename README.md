@@ -25,7 +25,7 @@ There are 3 type of Dataset
 
 
 ## Model 
-# resnet50-transfer-learning
+#### resnet50-transfer-learning
 
 ## How to Use System
 ### - Instal everything in Requirment.txt
