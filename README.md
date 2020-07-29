@@ -28,17 +28,19 @@ There are 3 type of Dataset
 # resnet50-transfer-learning
 
 ## How to Use System
-- Run preprocessor.py to extract the data classwise 
-- Run sign_train.py for Training the Data
+### - Instal everything in Requirment.txt
+### - Run **preprocessor.py** to extract the data classwise from Dataset
+### - Run **sign_train.py** for Training the Data
 # OUTPUT
 ## For NoFilterModeDataSet
    ### Training 
    Train loss: 0.0952325779944658 -- Acurracy: 97.0238095238095184%
    ### Testing
    Test Loss: 0.017252  -- Test Accuracy (Overall): 97% (991/1020)
-how to run:- demo.py <imagepath> --mod <model path>
-default model path is NoFilter.pth
-eg:  demo.py img.png --mod model.pth
+## How to run:- demo.py
+### demo.py 'imagepath' --mod 'model path'
+ Default model path is NoFilter.pth
+### eg:  demo.py img.png --mod model.pth
 # Team Members
 ## [Abhijeet C](https://github.com/abhijeet1999)
 ## [Bharath T U](https://github.com/5hade5layer)
